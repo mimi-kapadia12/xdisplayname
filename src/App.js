@@ -10,7 +10,7 @@ function App() {
   const submit = (e) => {
     e.preventDefault();
 
-    if (firstName && lastName) {
+    if (firstName.trim() !== "" && lastName.trim() !== "") {
       const fullNameResult = `${firstName} ${lastName}`;
       setFullName(fullNameResult);
       setSubmitted(true);
@@ -43,7 +43,7 @@ function App() {
 
       {submitted && (
         <div>
-          <p>Full Name:{fullName}</p>
+          <p>Full Name: {fullName}</p>
         </div>
       )}
     </div>
